@@ -24,6 +24,25 @@
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <style>
         
+        .slider-container {
+            width: 90%;
+            overflow: hidden;
+            position: relative;
+            margin: 50px auto;
+        }
+        .slider {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            margin: 50px 0px;
+        }
+        .slide {
+            flex: 0 0 33.33%; /* Set to 33.33% for 3 images per slide */
+        }
+        .slide img {
+            width: 100%;
+            height: 300px;
+        }
+
     </style>
 </head>
 
@@ -32,28 +51,49 @@
     <div id="preloder">
         <div class="loader"></div>
     </div>
-
-    <!-- Header Section Begin -->
-    <header class="header" style="background-color: white;">
-        <div class="">
-            <div class="col-lg-12">
-                <div class="header_logo">
-                    <a href="./index.html"><img src="images/logo.png" alt=""></a>
+    <div class="container-fluid bg-dark px-5 d-none d-lg-block">
+        <div class="row gx-0">
+            <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
+                <div class="d-inline-flex align-items-center" style="height: 45px;">
+                    <!-- <small class="me-3 text-light"><a href="#" class="me-3 text-light"><i class="fa fa-map-marker-alt me-2"></i>Gyatri Nagar IT Park,Nagpur,Maharashtra 440027</a></small> -->
+                    <small class="me-3 text-light"><a href="tel:+917045006318" class="me-3 text-light"><i class="fa fa-phone-alt me-2"></i>+91-7045006318</a></small>
+                    <small class="me-3 text-light"><a href="tel:+919819374764" class="me-3 text-light"><i class="fa fa-phone-alt me-2"></i>+91-9819374764</a></small>
+                    <small class="me-3 text-light"><a href="mailto:info@capitalmedia.co.in" class="text-light"><i class="fa fa-envelope-open me-2"></i>info@capitalmedia.co.in</a></small>
                 </div>
             </div>
-            <div class="row" style="align-items: center; justify-content: space-evenly;">
+            <div class="col-lg-4 text-center text-lg-end">
+                <div class="d-inline-flex align-items-center" style="height: 45px;">
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" target="_blank" href="#"><i class="fab fa-twitter fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" target="_blank" href="#"><i class="fab fa-facebook-f fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" target="_blank" href="#"><i class="fab fa-linkedin-in fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" target="_blank" href="#"><i class="fab fa-instagram fw-normal"></i></a>
+                    <!-- <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle" href=""><i class="fab fa-youtube fw-normal"></i></a> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header Section Begin -->
+    <header class="header" style="background-color: white; margin-top: 40px;">
+        <div class="">
+            
+            <div class="row" style="align-items: center; justify-content: center; margin: auto;">
                 <div class="col-lg-12">
                     <div class="header__nav__option">
                         <nav class="header__nav__menu mobile-menu">
                             <ul>
                                 <li class="active"><a href="./index.html">Home</a></li>
                                 <li><a href="./about.html">About</a></li>
-                                <li><a href="./portfolio.html">Portfolio</a></li>
                                 <li><a href="./services.html">Signage</a></li>
                                 <li><a href="./services.html">Exhibitions</a></li>
+                                <li><a href="./index.html"><img src="images/logo.png" alt=""/></a></li>
+                                <!-- <div class="col-lg-12">
+                                    <div class="header_logo">
+                                        <a href="./index.html"><img src="images/logo.png" alt=""></a>
+                                    </div>
+                                </div> -->
                                 <li><a href="./services.html">Corporate Events</a></li>
                                 <li><a href="./services.html">Digital Printing</a></li>
-                                
+                                <li><a href="./portfolio.html">Portfolio</a></li>
                                 <li><a href="./contact.html">Contact</a></li>
                             </ul>
                         </nav>
@@ -84,7 +124,7 @@
                                 <!-- <h2>Signages that make your Identity</h2> -->
                                 <h2 style="line-height: 2px; font-weight: 400;">Welcome</h2>
                                 <h2 style="margin-left: 220px; ">TO</h2>
-                                <!-- <a href="#" class="primary-btn">See more about us</a> -->
+                                <a href="#" class="primary-btn">See more about us</a>
                             </div>
                         </div>
                     </div>
@@ -101,7 +141,7 @@
                                     <h2 style="font-weight: 400;">Capital</h2>
                                     <h2>Media</h2>
                                 </div>
-                                <!-- <a href="#" class="primary-btn">See more about us</a> -->
+                                <a href="#" class="primary-btn">See more about us</a>
                             </div>
                         </div>
                     </div>
@@ -114,7 +154,7 @@
                             <div class="hero__text">
                                 <!-- <span>For website and video editing</span> -->
                                 <h2>Events & Signage Solutions</h2>
-                                <!-- <a href="#" class="primary-btn">See more about us</a> -->
+                                <a href="#" class="primary-btn">See more about us</a>
                             </div>
                         </div>
                     </div>
@@ -196,6 +236,8 @@
     </section>
     <!-- Services Section End -->
 
+    
+
     <!-- Work Section Begin -->
     <section class="work">
         <div class="work__gallery">
@@ -251,7 +293,50 @@
         </div>
     </section>
     <!-- Work Section End -->
+    <div class="slider-container">
+        <div style="text-align: center;">
+            <h2 style="text-decoration: underline; text-decoration-color: rgb(0, 182, 214); text-decoration-thickness: 5px;">Our Happy Clients</h2>
+        </div>
+        <div class="slider">
+            <div class="slide"><img src="./images/signanges/flora.JPG" alt="Image 1"></div>
+            <div class="slide"><img src="./images/signanges/Allahabad_Bank.png" alt="Image 2"></div>
+            <div class="slide"><img src="./images/signanges/building.JPG" alt="Image 3"></div>
+            <div class="slide"><img src="./images/signanges/IMG_2643.JPG" alt="Image 4"></div>
+            <div class="slide"><img src="./images/signanges/flora.JPG" alt="Image 1"></div>
+            <div class="slide"><img src="./images/signanges/Allahabad_Bank.png" alt="Image 2"></div>
+            <div class="slide"><img src="./images/signanges/building.JPG" alt="Image 3"></div>
+            <div class="slide"><img src="./images/signanges/IMG_2643.JPG" alt="Image 4"></div>
+            <div class="slide"><img src="./images/signanges/flora.JPG" alt="Image 1"></div>
+            <div class="slide"><img src="./images/signanges/Allahabad_Bank.png" alt="Image 2"></div>
+            <div class="slide"><img src="./images/signanges/building.JPG" alt="Image 3"></div>
+            <div class="slide"><img src="./images/signanges/IMG_2643.JPG" alt="Image 4"></div>
+            <div class="slide"><img src="./images/signanges/flora.JPG" alt="Image 1"></div>
+            <div class="slide"><img src="./images/signanges/Allahabad_Bank.png" alt="Image 2"></div>
+            <div class="slide"><img src="./images/signanges/building.JPG" alt="Image 3"></div>
+            <div class="slide"><img src="./images/signanges/IMG_2643.JPG" alt="Image 4"></div>
+            <!-- Add more slides as needed -->
+        </div>
+    </div>
 
+    <script>
+        const slider = document.querySelector(".slider");
+        let slideIndex = 0;
+
+        function nextSlide() {
+            slideIndex++;
+            if (slideIndex === slider.children.length) {
+                slideIndex = 0;
+            }
+            updateSlider();
+        }
+
+        function updateSlider() {
+            const translateX = -slideIndex * 33.33; // 33.33% for 3 images per slide
+            slider.style.transform = `translateX(${translateX}%)`;
+        }
+
+        setInterval(nextSlide, 3000); // Change slide every 3 seconds (adjust as needed)
+    </script>
     <!-- Counter Section Begin -->
     <section class="counter">
         <div class="container">
