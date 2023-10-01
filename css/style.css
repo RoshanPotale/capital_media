@@ -342,7 +342,7 @@ ol {
 
 .header__nav__option {
   /* text-align: center; */
-  padding: 28px 0px;
+  padding: 10px 0px;
 }
 
 .header__nav__menu {
@@ -1118,6 +1118,156 @@ ol {
 -----------------------*/
 .testimonial {
   padding-bottom: 60px;
+}
+
+.why-choose-us{
+  /* background: url('../images/choose.jpg'); */
+  background-color: white;
+  /* height: 80vh; */
+  padding: 50px;
+}
+
+.why-choose-content{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.why-choose-content > #left-content > div > div{
+  border: 1px solid white;
+  width: fit-content;
+  padding: 20px;
+  margin: 20px 0px;
+  border-radius: 50%;
+  background-color: rgb(208, 250, 237);
+  
+}
+.why-choose-content > #left-content > div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.why-choose-content > #left-content > div > p{
+  color: #1b1600;
+  font-size: 16px;
+  text-align: center;
+}
+
+.why-choose-content > #left-content > div > div > img{
+  width: 80px;
+  height: 80px;
+  transition: transform 0.5s ease;
+}
+.why-choose-content > #left-content > div > div > img:hover{
+  transform: scale(2);
+}
+.why-choose-content > #left-content > div > div > img{
+  width: 80px;
+  height: 80px;
+}
+.why-choose-content > #left-content
+{
+  width: 50%;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+}
+.why-choose-content > #right-content
+{
+  width: 40%;
+}
+.why-choose-content > #right-content > h1
+{
+  background: linear-gradient(45deg, #ffac68, #e2c624);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: 60px;
+  margin-bottom: 20px;
+}
+.why-choose-content > #right-content > p{
+  color: rgb(65, 1, 1);
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.why-choose-content > #right-content > button{
+  background-image: linear-gradient(to right, #16A085 0%, #2007ad  51%, #1cc2a1  100%);
+  margin: 10px;
+  padding: 10px 20px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: rgb(53, 1, 1);            
+  /* box-shadow: 0 0 20px #eee; */
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  display: block;
+  font-weight: 700;
+}
+.link-animated a {
+  transition: .5s;
+}
+
+.link-animated a:hover {
+  padding-left: 10px;
+}
+.why-choose-content > #right-content > button:hover{
+
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+
+@media all and (max-width:768px) {
+  .why-choose-content{
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      flex-direction: column-reverse;
+      justify-content: center;
+  }
+  .why-choose-content > #left-content
+{
+    width: 100%;
+    /* display: grid; */
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid white;
+}
+.why-choose-content > #right-content
+{
+    width: 100%;
+}
+.carousel-inner{position:relative;width:100%;overflow:hidden;height: 50vh;}
+.carousel-inner img{
+    height: 40vh;
+}
+.why-choose-content > #right-content > h1
+{
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+.why-choose-content > #right-content > p{
+    font-size: 16px;
+}
+.why-choose-content > #right-content > button{
+    font-size: 14px;
+    padding: 8px 15px;
+}
+.why-choose-content > #left-content > div > div > img{
+    width: 50px;
+    height: 50px;
+    transition: transform 0.5s ease;
+}
+.why-choose-content > #left-content > div > div{
+    padding: 10px;
+    text-align: center;
+}
+.why-choose-content > #left-content > div > p{
+    color: #382e02;
+    font-size: 14px;
+}
 }
 
 .testimonial__slider.owl-carousel .owl-item .col-lg-4 {
