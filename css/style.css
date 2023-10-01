@@ -752,6 +752,7 @@ ol {
 }
 
 .section-title.team__title {
+  margin-left: 350px;
   margin-bottom: 90px;
 }
 
@@ -818,9 +819,16 @@ ol {
 }
 
 .team__btn {
-  position: absolute;
+  display: flex;
+  justify-content: center;
+  /* position: absolute; */
+  margin-top: 20px;
   right: 0;
   bottom: 0;
+}
+
+#other-images{
+  display: none;
 }
 
 /*---------------------
