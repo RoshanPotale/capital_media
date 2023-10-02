@@ -29,11 +29,14 @@
 /*----------------------------------------*/
 html,
 body {
+  width: 100%;
   height: 100%;
   font-family: "Josefin Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
-  cursor: url('../images/logo.png') 16 16, auto;
+  /* cursor: url('../images/logo.png') 16 16, auto; */
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
 
 h1,
 h2,
@@ -108,15 +111,19 @@ ol {
   Helper CSS
 -----------------------*/
 .section-title {
-  
+  margin-left: 50px;
   margin-bottom: 0px;
 }
 .section-title.center-title {
   text-align: center;
+  margin-left: 50px;
 }
 .section-title.center-title h2:after {
   right: 0;
   margin: 0 auto;
+  /* position:absolute;
+  left:50%;
+  transform: translateX(-50%); */
 }
 .section-title span {
   color: #ffffff;
@@ -125,22 +132,29 @@ ol {
   /* letter-spacing: 2px; */
   text-transform: uppercase;
   margin-bottom: 0px;
+   /* position:absolute;
+  left:50%;
+  transform: translateX(-50%); */
+  
 }
 .section-title h2 {
-  color: #ddd4ec;
+  color: #e1d9ef;
   font-weight: 300;
   text-transform: uppercase;
   position: relative;
   padding-bottom: 25px;
+  padding-left:105px ;
 }
+
 .section-title h2:after {
   position: absolute;
-  left: 0;
+  left: 80px;
   bottom: 0;
   height: 5px;
-  width: 320px;
+  width: 200px;
   background: #00bfe7;
   content: "";
+  
 }
 .header_logo{
   display: flex;
@@ -150,6 +164,36 @@ ol {
 }
 .header_logo > img{
   width: 100%;
+}
+
+#vision-mission-value>img{
+  width: 120px;
+  height: 120px;
+  /* border: 2px solid red; */
+  border-radius: 50%;
+  background-color: #ffffff;
+  padding: 20px;
+  transition: all 0.5s ease;
+}
+#vision-mission-value>img:hover{
+  transform: scale(1.1);
+}
+#vision-mission-value{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#vision-mission-value > p{
+  font-size: 20px;
+  word-spacing: 1px;
+  text-align: center;
+  line-height: 30px;
+}
+#vision-mission-value > h4{
+  padding: 20px;
+  color: #ffa16a;
+  font-size: 28px;
 }
 
 .set-bg {
@@ -340,16 +384,86 @@ ol {
   }
 }
 
+.about-us{
+  margin-top: 100px;
+  background: url(../images/aboutbg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 50px;
+  
+}
+#about-next{
+  display: flex;
+  align-items: center;
+}
+#left-about{
+  width: 70%;
+  padding: 0px 20px 0px 80px;
+}
+#left-about>h3{
+  color: #fd6e36;
+  font-size: 40px;
+}
+#left-about>h3~p{
+  font-size: 20px;
+  word-spacing: 2px;
+  letter-spacing: 1px;
+  
+}
+#left-about>h3+p{
+  color: #fd6e36;
+  margin-top: 15px;
+  font-size: 22px;
+}
+#right-about{
+  width: 30%;
+}
+#right-about>img{
+  width: 100%;
+}
+#how-it-works{
+  background: url(../images/aboutbg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 100px;
+}
+#how-it-works > p{
+  /* border: 1px solid white; */
+  font-size: 32px;
+  text-align: center;
+  width: 50%;
+  line-height: 40px;
+  margin: auto;
+  padding:40px;
+  color: #fc9d72;
+  transition: all 0.5s ease;
+}
+
+
+#left-about>p{
+  color: #000;
+}
+.about-us > h2{
+  padding: 100px 0px;
+  text-align: center;
+  color: white;
+}
+
 .header__nav__option {
+
+  margin-top: 20px;
   /* text-align: center; */
-  padding: 10px 0px;
+  /* padding: 10px 0px; */
 }
 
 .header__nav__menu {
   display: inline-block;
-  margin-right: 12px;
-  /* justify-content: center; */
+  margin-left: 20px;
+  display: flex;
+  justify-content: space-around;
+
 }
+
 .header__nav__menu ul li {
   list-style: none;
   display: inline-block;
